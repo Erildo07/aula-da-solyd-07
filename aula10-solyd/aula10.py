@@ -1,1 +1,2 @@
-open("arquivo.txt","a")
+arquivo = open("arquivo.txt","a")
+type(print(arquivo))
