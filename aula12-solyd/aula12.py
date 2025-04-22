@@ -1,8 +1,10 @@
 import requests    #Beautiful soup 4 BS$ pip install bs4
 
-cabecalho = {"user-agent ": "windows ", "Referer": "https:// google.com"}
+cabecalho = {"user-agent ": "windows ", 
+             "Referer": "https:// google.com",
+             "cf-ipcountry": "US"}
 
-meus_cookies = {"ultima visita":"21-04-2025" }
+meus_cookies = {"ultima visita": "21-04-2025" }
 
 dados = {"usarname": "Eridlo",
         "password": "123"}
