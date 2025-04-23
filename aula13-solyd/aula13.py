@@ -1,7 +1,11 @@
 import requests
 
-# Inclua a chave de API diretamente na URL
-req = requests.get('http://www.omdbapi.com/?t=Harry+potter&apikey=3b28a7e')
+req = None
 
-# Exiba o conteúdo da resposta
+try:
+    req = requests.get('http://www.omdbapi.com/?t=Harry+potter&apikey=3b28a7es')
+except:
+    print("Erro na conexão")
+    exit()
+
 print(req.text)
