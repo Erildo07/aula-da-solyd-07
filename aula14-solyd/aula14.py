@@ -2,7 +2,7 @@ import re
 
 string_de_test = "o gato,a gata, os gatinhos, os gatões é bonito"
 
-padrão = re.findall(r"gat\w",string_de_test)
+padrão = re.findall(r"[gat]",string_de_test)
 
 
 if  padrão:
