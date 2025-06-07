@@ -1,8 +1,11 @@
-import re   
+import re
+import requests
 
-string_de_test = "o gato,a gata, os gatinhos, os gatões é bonito"
+requests = requests.get("https://descubraatibaia.tur.br/sem-categoria/contato/")
 
-padrão = re.findall(r"[gat]\w+",string_de_test)
+#string_de_test = "o gato,a gata, os gatinhos, os gatões é bonito"
+
+padrão = re.findall(r"[\w\.-]+@[\w-]+\.[\w\.-]+", requests.text)
 
 
 if  padrão:
@@ -10,3 +13,5 @@ if  padrão:
     
 else:
     print("Padrão não encontrado")
+
+print
