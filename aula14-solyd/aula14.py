@@ -1,7 +1,12 @@
 import re   
 
-string_de_test = "o gato é bonito"
+string_de_test = "o gato,a gata, os gatinhos, os gatões é bonito"
 
-padrão = re.search("",string_de_test)
+padrão = re.findall(r"gat\w",string_de_test)
 
-print(padrão.group("ola"))
+
+if  padrão:
+    print(padrão)
+    
+else:
+    print("Padrão não encontrado")
